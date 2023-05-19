@@ -118,7 +118,8 @@ public class RestRequest {
     String breakRetryReason = "";
 
     // try request till we get a good response or retry timeout
-    while (true) {
+    // if we get to 100 attempts, then probably something is very wrong
+    while (retryCount < 100) {
       logger.debug("Retry count: {}", retryCount);
 
       try {
