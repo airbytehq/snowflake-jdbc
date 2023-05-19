@@ -12,6 +12,16 @@
 
   <repositories>
     <repository>
+      <id>Maven Central</id>
+      <name>Maven Central</name>
+      <layout>default</layout>
+      <url>https://repo.maven.apache.org/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
       <id>Central</id>
       <name>Internal Central Repo2</name>
       <layout>default</layout>
@@ -20,6 +30,7 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
+
   </repositories>
 
   <prerequisites>
@@ -503,7 +514,7 @@
             <goals>
               <goal>testCompile</goal>
             </goals>
-          </execution>                  
+          </execution>
         </executions>
       </plugin>
       <plugin>
@@ -802,7 +813,7 @@
                      <relocation>
                        <pattern>org.codehaus</pattern>
                        <shadedPattern>${shadeBase}.org.codehaus</shadedPattern>
-                     </relocation>                     
+                     </relocation>
                    </relocations>
                    <filters>
                       <filter>
